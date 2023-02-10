@@ -5,10 +5,10 @@ HTTP request and response log middleware and format utilities.
 ## Usage
 
 ```ts
-import { createHandler } from "https://deno.land/x/http_log/mod.ts";
+import { createHandler } from "https://deno.land/x/http_log@$VERSION/mod.ts";
 
 const logHandler = createHandler();
-logHandler(new Request("http://localhost"));
+logHandler(new Request("http://localhost"), () => new Response("ok"));
 ```
 
 output:

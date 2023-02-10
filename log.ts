@@ -16,10 +16,10 @@ export interface LogCallback {
 /**
  * @example
  * ```ts
- * import { createHandler } from "https://deno.land/x/http_log/mod.ts";
+ * import { createHandler } from "https://deno.land/x/http_log@$VERSION/mod.ts";
  *
  * const logger = createHandler();
- * logger(new Request("http://localhost"))
+ * logger(new Request("http://localhost"), () => new Response("ok"))
  * ```
  *
  * output:
