@@ -1,20 +1,27 @@
 # http-log
 
-HTTP request and response log middleware and format utilities.
+HTTP log middleware for standard `Request` and `Response`.
+
+## Middleware
+
+For a definition of Universal HTTP middleware, see the
+[http-middleware](https://github.com/httpland/http-middleware) project.
 
 ## Usage
 
-```ts
-import { createHandler } from "https://deno.land/x/http_log@$VERSION/mod.ts";
+Middleware is exported by default.
 
-const logHandler = createHandler();
-logHandler(new Request("http://localhost"), () => new Response("ok"));
+```ts
+import logger from "https://deno.land/x/http_log@$VERSION/mod.ts";
+
+const middleware = logger();
+middleware(new Request("http://localhost"), () => new Response("ok"));
 ```
 
 output:
 
 ```bash
-<method> <url-path> <colored:response-status> - <response-time>ms
+<method> <url:path:?search> <colored:response-status> <headers:content-length:unit> - <response-time:unit>
 GET / 200 - 10ms
 ```
 
