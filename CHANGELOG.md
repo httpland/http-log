@@ -1,3 +1,10 @@
+# [1.0.0-beta.2](https://github.com/httpland/http-log/compare/1.0.0-beta.1...1.0.0-beta.2) (2023-02-13)
+
+
+### Features
+
+* **log:** change middleware factory interface ([41c4654](https://github.com/httpland/http-log/commit/41c4654db0e1d12717b6e7bbc18940c7a51da279))
+
 # 1.0.0-beta.1 (2023-02-10)
 
 
